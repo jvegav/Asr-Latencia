@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-content-wrapper" >
+    <div class="container" style = "align-self: center; ">
+        <h4 class="page-title">Anote el numero que le llego a su numero de telefono</h4>
+        <h5>Ya falta pocooooo</h5>
+    </div>
+    <div>
+        <form method="post" action="{% url 'verifySuccess' %}">
+            <label for="otp" class="form-label">Enter a the number we sent you:</label>
+            {% csrf_token %}
+            <input type="text" class="form-control"  name="otp"  >
+            <label for="otp" class="form-label">Enter your telephone (again):</label>
+            <input type="text" class="form-control"  name="phonenumber"  >
+            <button type="submit" class="btn btn-success waves-effect waves-light"> enviar</button>
+              
+        </form>
+    </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

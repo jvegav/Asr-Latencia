@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div style=" display: flex; align-items: center; justify-content: center;" class="login-box auth0-box before">
+            <div>
+                <button type="button" class="btn btn-success waves-effect waves-light"
+                        onClick=" window.location.href='/userCreate' " style="text-align:center;"> 
+                        Registrar Usuario
+                </button>
+
+                <button type="button" class="btn btn-success waves-effect waves-light"
+                        onClick=" window.location.href='/sendOtp' " style="text-align:center;"> 
+                        Aceptar Oferta De Tarjeta De Credito
+                </button>
+            </div>
+    </div>
+
+{% endblock %}

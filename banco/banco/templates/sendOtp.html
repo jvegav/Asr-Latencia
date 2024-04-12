@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-content-wrapper" >
+    <div class="container" style = "align-self: center; ">
+        <h4 class="page-title">Felicidades estas proximo a tener tu tarjeta de credito</h4>
+        <h5> solo un pequeño paso mas para validar tu identidad</h5>
+    </div>
+    <div>
+        <form method="post" action="{% url 'sendSuccess' %}">
+            <label for="phonenumber" class="form-label">Enter a number:</label>
+            {% csrf_token %}
+            <input type="text" class="form-control"  name="phonenumber"  >
+            <button type="submit" class="btn btn-success waves-effect waves-light"> enviar SMS</button>
+              
+        </form>
+    </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
